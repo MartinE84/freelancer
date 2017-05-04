@@ -1,0 +1,108 @@
+.contactList{
+	position: fixed;
+	bottom: 0px;
+	right: 10px;
+	width: 250px;
+	z-index: 5;
+}
+
+.contactList__titleBox{
+	background: @gray-dark;
+	color: @white;
+	padding: 12px;
+	&:hover{
+		cursor:pointer;
+	}
+	.contactList__title{
+		font-size: 1.25em;
+	}
+}
+.contactList__collapsible-list{
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.contactList__profileBox{
+	max-height: 260px;
+	overflow-y: auto;
+}
+.contactList__profile{
+	border-left: 1px solid @gray-border; 
+	border-bottom: 1px solid @gray-border; 
+	border-right: 1px solid @gray-border; 
+	padding: 5px;
+	display: table;
+	width: 100%;
+	position: relative;
+	background: @gray-medium;
+	.row{
+		display:table-row;
+	}
+	.profile__imgBox{
+		width: 40px;
+		height: 40px;
+		background: @gray-d-l;
+		display: table-cell;
+		.profile__img{
+			width:40px;
+			height:40px;
+			display:block;
+		}
+	}
+	.profile__user{
+		display: table-cell;
+		vertical-align: middle;
+		padding-left: 10px;
+		font-weight: 600;
+		color: @gray-dark;
+		font-size: 0.85em;
+		&:hover{
+			cursor: default;
+		}
+	}
+	.profile__state{
+		display: table-cell;
+		position: absolute;
+		right: 5px;
+		top:~"calc(50% - 10px)";
+	}
+	.profile__state-circle{
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		display: inline-block;
+		background: @gray-offline;
+	}
+}
+
+.contactList__searchBox{
+	height: 40px;
+	border: 1px solid @gray-border; 
+	background: #E5E5E5;
+	transition:all ease 0.3s;
+	.search__logo{
+		display: inline-block;
+		width: 40px;
+		height: 40px;
+		background: url("/../../img/search.png") no-repeat center;
+		background-size: 18px;
+		border:0px;
+		&:hover{
+			cursor:pointer;
+		}
+	}
+	.search__input{
+		height: 38px;
+		border:none;
+		padding: 0;
+		position:relative;
+		bottom: 42px;
+		left: 40px;
+		width:~"calc(100% - 40px)";
+		background: #E5E5E5;
+		font-weight: 600;
+		color: @gray-dark;
+		font-size: 0.75em;
+		transition:all ease 0.3s;
+	}
+}

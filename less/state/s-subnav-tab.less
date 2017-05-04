@@ -1,0 +1,32 @@
+@media screen and (max-width:800px){
+    .subnav-tab{
+        padding: 25px 10px;
+    }
+    .tabs .tabs__item-link{
+        padding: 10px 12px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .subnav-tab{
+        background: @blue-light;
+    }
+    .subnav-tab-box{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .tabs{
+        width:80px;
+        .tabs__item {
+            float: none;
+        }
+        #current .tabs__item-link{
+            width: 100%;
+        }
+    }
+    .content{
+        width:~'calc(100% - 80px)';
+        overflow-y: auto;
+    }
+}

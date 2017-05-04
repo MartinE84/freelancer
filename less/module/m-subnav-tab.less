@@ -1,0 +1,55 @@
+
+.subnav-tab{
+    background: url('/../../img/bg.png') 100%;
+    padding: 40px 10px;
+}
+
+.tabs{
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  
+    .tabs__item{
+        float: left;
+    }
+     
+    .tabs__item-link{
+        position: relative;
+        padding: 10px 15px;
+        float: left;
+        text-decoration: none;
+        color: @white;
+        font-weight: 600;
+        font-size: 0.9em;
+        transition: all ease 0.25s;
+        &:focus,{
+            background: #fff;
+            outline: 0;
+        }
+    }
+}
+ 
+.tabs #current .tabs__item-link{
+    background: #fff;
+    color:@blue-light;
+    z-index: 3;
+}
+ 
+.content{
+    background: #fff;
+    padding: 10px;
+    height: 310px;
+    position: relative;
+    z-index: 2;
+    overflow:hidden;
+    
+    .content__item-img{
+        width:100%;
+    }
+    .content__item-txt{
+        font-size: 1em;
+        color:@gray-dark;
+    }
+}

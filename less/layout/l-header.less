@@ -1,0 +1,38 @@
+.header, 
+.footer{
+    background: @blue;
+    padding:15px;
+    color:@white;
+}
+
+.header__box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .header__logo-img{
+        max-width: 150px;
+    }
+    
+    .header__buttons-login{
+        background: @violet;
+        transition:background ease 0.25s;
+        &:hover{
+            background: #3E4860;
+        }
+    }
+    .header__buttons-signup{
+        background: @green;
+        transition:background ease 0.25s;
+        &:hover{
+            background: #8BBA5C;
+        }
+    }
+
+}
+
+
+
+
+

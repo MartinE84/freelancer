@@ -1,0 +1,86 @@
+@media screen and (max-width:800px){
+    .navbar{
+        padding:15px;
+    }
+
+	.navbar__list{
+	    margin:auto;
+	}
+	
+	.navbar__box{
+	    .navbar__search{
+	        width:100%;
+	        padding-top: 10px;
+	     }
+	     input[type=text].navbar__search-input{
+	         width:~"calc(100% - 38px)";
+	     }
+	}
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+    
+    body{
+        padding-top: 176px;
+    }
+    
+    .navbar{
+        position: fixed;
+        width: 100%;
+        top: 107px;
+        z-index: 5;
+    }
+    .navbar__list{
+    	width: 100%;
+    }
+    .menu_bar {
+		display:block;
+	}
+ 
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 9px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 1.4em;
+		text-decoration: none;
+	}
+ 
+	.menu_bar span {
+		float: right;
+		background: url("/../../img/menu.png") no-repeat center 100%;
+		display: inline-block;
+		height: 22px;
+	    width: 26px;
+	    background-size: 100% 100%;
+	}
+	
+	.navbar__box{
+	    width: 80%;
+		height: ~"calc(100% - 80px)";
+		position: fixed;
+		right:100%;
+		margin: 0;
+		background: @pink;
+		z-index: 4;
+		padding:20px;
+	    justify-content: space-around;
+	    align-content: flex-start;
+		.navbar__list-item{
+			display: block;
+			padding: 10px 0;
+			border:1px solid @pink-dark;
+			background: @pink;
+			transition:all ease 0.25s;
+			margin-right: 0px;
+			margin-bottom: 2px;
+			padding-left: 5px;
+			&:hover{
+				background: @pink-dark;
+			}
+		}
+	}
+}
