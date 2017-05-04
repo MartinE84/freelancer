@@ -13,26 +13,28 @@ $(document).ready(function() {
     });
     
     //get JSON
-    $.getJSON('contact-list-users.json', function(data){
-        //var user = data.user.username;
+   var box_contact;
+    $.get('contact.html', function (data_c) {
+              
+            box_contact = data_c;
+            $.getJSON('contact-list-users.json', function(data){
         
-        $.each(data, function(i, usuario){
-            //console.log(usuario);
-            $.when($.get('contact.html', function (data) {
-                $("#contactList__collapsible-list").append(data);
-            })).done(function(){
+                $.each(data, function(i, usuario){
+                    //console.log(usuario);
+                    $.when( $("#contactList__collapsible-list").append(box_contact)).done(function(){
+                        
+                        var status_profileBox = (usuario.status == 'Offline') ? 'offBox' : 'onBox';
+                        var obj = $("#contactList__collapsible-list .contactList__profileBox:last").addClass(status_profileBox);
+                        obj.find('.profile__user').html(usuario.username);
+                        obj.find('.profile__img').attr('src' , usuario.profileimage);
+                        var status_class = (usuario.status == 'Offline') ? 'offline' : 'online';
+                        obj.find('.profile__state .profile__state-circle').addClass(status_class);                
+                        
+                    });
+                    
+                });
                 
-                var status_profileBox = (usuario.status == 'Offline') ? 'offBox' : 'onBox';
-                var obj = $("#contactList__collapsible-list .contactList__profileBox:last").addClass(status_profileBox);
-                obj.find('.profile__user').html(usuario.username);
-                obj.find('.profile__img').attr('src' , usuario.profileimage);
-                var status_class = (usuario.status == 'Offline') ? 'offline' : 'online';
-                obj.find('.profile__state .profile__state-circle').addClass(status_class);                
-                
-            });
-            
-        });
-        
+            });               
     });
-    
+           
 });
